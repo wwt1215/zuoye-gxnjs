@@ -1,0 +1,131 @@
+
+<html>  
+  <head>  
+  	    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        <meta charset="utf-8">  
+        <title>高性能计算作业演示</title>  
+  </head> 
+<style>
+	#map {
+		height: auto;
+		margin: 3px;
+		background-color: black;/*#FFE4C4;*/
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	.overlay {
+	  fill: none;
+	  pointer-events: all;
+	}
+
+	#tooltip {
+			position: absolute;
+			width: 180px;
+			height: auto;
+			padding: 10px;
+			background-color: #F08080;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border-radius: 10px;
+			-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+			pointer-events: none;
+		}
+	#tooltip.hidden {
+		display: none;
+	}
+	#tooltip p {
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 16px;
+			line-height: 20px;
+		}
+</style>
+<body>
+	
+	<div id="tooltip" class="hidden">
+			<p><strong>省份：</strong><span id="province">100</span></p>
+			<p><strong>年份：</strong><span id="year">100</span></p>
+			<p><strong>总和：</strong><span id="sum">100</span></p>
+			<p><strong>工资收入：</strong><span id="industry1">100</span></p>
+			<p><strong>财产性收入：</strong><span id="industry2">100</span></p>
+			<p><strong>经营收入：</strong><span id="industry3">100</span></p>
+	</div>
+    <div id="map"></div>
+
+<script src="mapjs/d3.js"></script>
+<script src="mapjs/drawMap.js"></script>
+<script src="mapjs/util.js"></script>
+<script src="js/timeaxis.js"></script>
+<script src="js/pie.js"></script>
+
+
+<link rel="stylesheet" href="mapjs/css/normalize.min.css" />
+<link rel="stylesheet" href="mapjs/css/ion.rangeSlider.css" />
+<link rel="stylesheet" href="mapjs/css/ion.rangeSlider.skinFlat.css" id="styleSrc"/>
+<script src="mapjs/jquery-1.11.0.min.js"></script>
+<script src="mapjs/ion.rangeSlider.js"></script>
+<script src="mapjs/rangeSlider.js"></script>
+
+    <div id="rangeSlider" style="padding-left:55px; margin-top:-120px; width:250px; font-size:12px;">
+	     <input type="text" id="range_1" />
+    </div>
+
+
+<script>
+	var totalmaxvalue=10000;
+	var totalminvalue=10;
+	var namelabeldy=50;
+	var namelabeldx=30;
+	var provinceDataYear;
+
+	var globalyear = 2004;
+	
+	
+	
+	var timeheight = 80;
+	var width  = 1330;
+	var height = 520;
+	var background = "#D1EEEE";
+	var overColor = "#F08080";
+
+	var svg = d3.select("#map").append("svg")
+	    .attr("width", width)
+	    .attr("height", height + timeheight)
+	    .append("g")
+	    .attr("transform", "translate(0,0)");
+
+	var chinaJsonPath = "mapdata/china.json";
+	drawMap(chinaJsonPath, svg);
+	
+    var nodes = [];
+	var provinceNodes = [];
+	var coutiesNodes = [];
+	var provinceId = "";
+	var coutiesId = "";
+	var textColor= "black";
+	
+	//var provinceMax=provinceDataYear.max;
+	//	var provinceMin=provinceDataYear.min;
+    //drawRangeFinal(1000, 1);
+
+</script>
+
+<script src="js/name.js"></script>
+<script>
+	svg.append("rect").attr("id","name_show_button")
+			.attr({ x:namelabeldx-5, y:namelabeldy-22,rx:"8", ry:"6", width:"140", height:"28"})
+			.attr("fill","#EEEEEE")
+			.on("click",isNameShow);
+	svg.append("text").attr("id","name_show")
+		.attr("dx",namelabeldx).attr("dy",namelabeldy).attr("font-anchor","middle")
+		.text("城镇居民收入趋势")
+			.on("click",isNameShow);;
+		
+	
+	</script>
+</body>  
+</html>  

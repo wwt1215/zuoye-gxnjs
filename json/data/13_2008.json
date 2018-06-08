@@ -1,0 +1,15 @@
+{
+	"max":18864.62,
+	"min":220.34,
+	"130127":{"industry1":786.84,"industry3":2206.02,"industry2":2770.49,"sum":5763.35},
+	"130102":{"industry1":44.3,"industry3":123.3,"industry2":52.74,"sum":220.34},
+	"130183":{"industry1":334.5,"industry3":661.8,"industry2":681.5,"sum":1677.8},
+	"130107":{"industry1":83.45,"industry3":4097.26,"industry2":3892.12,"sum":8072.83},
+	"130121":{"industry1":1020.09,"industry3":2292.55,"industry2":2320.6,"sum":5633.24},
+	"130126":{"industry1":1022.45,"industry3":2428.95,"industry2":2190.54,"sum":5641.94},
+	"130185":{"industry1":1248.59,"industry3":8335.3,"industry2":9280.73,"sum":18864.62},
+	"130131":{"industry1":950.5,"industry3":1963.9,"industry2":1844.9,"sum":4759.3},
+	"130103":{"industry1":1379.93,"industry3":2510.3,"industry2":2489.4,"sum":6379.63},
+	"130104":{"industry1":461.26,"industry3":833.36,"industry2":914.47,"sum":2209.09},
+	"130128":{"industry1":607.75,"industry3":1192.53,"industry2":1281.63,"sum":3081.91}
+}
