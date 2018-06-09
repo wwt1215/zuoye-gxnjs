@@ -8,7 +8,7 @@
 
 # 安装方式
    可以将当前目录放到web服务器目录下.
-   比如使用node方式，安装http-sever后，在当前目录下命令行http-sever启动web服务，并访问http://127.0.0.1:8080/index.html
+   比如使用node方式，安装http-sever后，在当前目录下命令行下 http-server 启动web服务，之后访问http://127.0.0.1:8080/index.html
 
 # 项目结构
    请参看zuoye.pdf 查看详细内容
