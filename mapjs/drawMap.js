@@ -91,7 +91,7 @@ function drawPrivenceMap(d, mapPath, svg) {
 
 		var projection = d3.geo.mercator()
 					.center(root.cp)
-					.scale(root.size*2.7)
+					.scale(root.size*1.8)
     				.translate([width/4*3, height/2]);
 	
 		var path = d3.geo.path().projection(projection);
@@ -160,7 +160,7 @@ function drawCoutyMap(d,svg) {
 		var projection = d3.geo.mercator()
 					//.center(d.properties.cp)
 					.center(centers)
-					.scale(zoomScale*35)
+					.scale(zoomScale*24)
     				.translate([width/4*3, height/2]);
 		var path = d3.geo.path().projection(projection);
 		//var color = d3.scale.category20();

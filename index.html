@@ -50,9 +50,9 @@
 			<p><strong>省份：</strong><span id="province">100</span></p>
 			<p><strong>年份：</strong><span id="year">100</span></p>
 			<p><strong>总和：</strong><span id="sum">100</span></p>
-			<p><strong>工资收入：</strong><span id="industry1">100</span></p>
-			<p><strong>财产性收入：</strong><span id="industry2">100</span></p>
-			<p><strong>经营收入：</strong><span id="industry3">100</span></p>
+			<p><strong>第一产业：</strong><span id="industry1">100</span></p>
+			<p><strong>第二产业：</strong><span id="industry2">100</span></p>
+			<p><strong>第三产业：</strong><span id="industry3">100</span></p>
 	</div>
     <div id="map"></div>
 
@@ -82,12 +82,12 @@
 	var namelabeldx=30;
 	var provinceDataYear;
 
-	var globalyear = 2004;
+	var globalyear = 2008;
 	
 	
 	
 	var timeheight = 80;
-	var width  = 1330;
+	var width  = 1000;
 	var height = 520;
 	var background = "#D1EEEE";
 	var overColor = "#F08080";
@@ -122,7 +122,7 @@
 			.on("click",isNameShow);
 	svg.append("text").attr("id","name_show")
 		.attr("dx",namelabeldx).attr("dy",namelabeldy).attr("font-anchor","middle")
-		.text("城镇居民收入趋势")
+		.text("中国10年GDP趋势")
 			.on("click",isNameShow);;
 		
 	
